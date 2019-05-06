@@ -13,6 +13,7 @@ export class ViewapplicantComponent implements OnInit {
   public appId:number;
   public scoreArray:number[];
   checked:boolean = false
+  searchTerm:string;
   pts:number
   filteredApplicants=[];
   clickedId: number
@@ -26,7 +27,7 @@ export class ViewapplicantComponent implements OnInit {
   }
   getData(){
     this.service.getApplicant().subscribe(
-      data=>{ 
+      (data:[])=>{ 
         this.applicant=data
         this.filteredApplicants=data;
         },

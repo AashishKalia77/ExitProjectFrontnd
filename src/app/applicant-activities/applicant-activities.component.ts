@@ -60,13 +60,8 @@ export class ApplicantActivitiesComponent implements OnInit {
     
     this.service.checkActivityByapplicantIdAndActivityId(this.applicantId, actId).subscribe((data) => {
       console.log(data)
-      if (data == "true") {
-        //plus is enabled
-        //add the activity record to AAR table
-        alert('activity record is added');
-        //create the aar record object
+      if (data == "true") {      
         
-
         var newOb =
         {
           "status": "PLANNED",
@@ -93,6 +88,8 @@ export class ApplicantActivitiesComponent implements OnInit {
         this.service.saveActivityRecord(newOb).subscribe((data) => {
           console.log('Record Saved'); 
         })
+
+        alert('activity record is added');
       }
       else {
         //check the conditions

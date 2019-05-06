@@ -100,6 +100,7 @@ export class EditactivityComponent implements OnInit {
       console.log('updated scuccessfully');
       this.Updateform.reset();
       this.getData();
+      this.router.navigate(['adminhome/viewactivity'])
     })
   }
 

@@ -9,12 +9,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./level.component.css']
 })
 export class LevelComponent implements OnInit {
- models: string[] = [
-   'Level 1',
-   'Level 2',
-   'Level 3',
-    'Level 4'
-]
   constructor(private nagpService: NagpServiceService,private router :Router) { }
   levelform: FormGroup
   validMessage: string = ""

@@ -73,6 +73,8 @@ update(){
     this.validateMessage ='updated scuccessfully';
     this.updateform.reset();
     this.getData();
+    this.router.navigate(['adminhome/viewlevel'])
+
   })
 }
 

@@ -144,6 +144,7 @@ export class NagpServiceService {
       return this.http.get('server/activitycheck?activity_id='+activityid+'&applicant_id='+applicantid, {responseType:'text'}) 
     }
 
+    
     saveActivityRecord(activityRecord){
         console.log(activityRecord);
         return  this.http.post('server/addApplicantActivity',activityRecord,httpOptions);

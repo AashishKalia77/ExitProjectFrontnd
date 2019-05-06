@@ -30,6 +30,7 @@ import { PerformActivityComponent } from './perform-activity/perform-activity.co
 import { ApplicantRecordListComponent } from './applicant-record-list/applicant-record-list.component';
 import { AdminLogoutComponent } from './admin-logout/admin-logout.component';
 import {NgxPaginationModule} from 'ngx-pagination'
+import { EmployeeFilterPipe } from './viewapplicant/employee-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import {NgxPaginationModule} from 'ngx-pagination'
     PerformActivityComponent,
     ApplicantRecordListComponent,
     AdminLogoutComponent,
+    EmployeeFilterPipe
   ],
   imports: [
     BrowserModule,

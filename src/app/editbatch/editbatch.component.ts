@@ -37,6 +37,7 @@ export class EditbatchComponent implements OnInit {
   getData(){
     this.service.getBatch().subscribe(
       data=>{ this.editBatch=data
+        console.log(data);
       },
       err => console.log(err),
       ()=>console.log("Edit-Batch loaded")
@@ -49,11 +50,11 @@ export class EditbatchComponent implements OnInit {
       this.selectBatchId=this.batchform.controls['batchId'].value
     this.service.getBatchById(this.selectBatchId).subscribe(
       data=>{
+        this.batchInfo='';
+        console.log("batch info is ",this.batchInfo);
         this.batchInfo = data;
-  
         this.check = true;
-        console.log(data)
-        this.batchform.reset();
+        console.log("new batch info is ",this.batchInfo);
         return true;
       },
       error=>{
@@ -66,9 +67,11 @@ export class EditbatchComponent implements OnInit {
 
 update(){
   this.service.updateBatch(this.updateform.value,this.selectBatchId).subscribe(data=>{
+    
     console.log('updated scuccessfully');
     this.updateform.reset();
     this.getData();
+    this.router.navigate(['adminhome/viewbatch'])
   })
 }
 

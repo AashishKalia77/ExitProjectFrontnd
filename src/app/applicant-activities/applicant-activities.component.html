@@ -11,7 +11,7 @@
     </tr>
     <tr *ngFor="let bike of activity">
       <td>
-        {{bike.name}}
+        {{bike.name}} 
       </td>
       <td>
         {{bike.description}}
@@ -23,7 +23,7 @@
         {{bike.qualifyPoints}}
       </td>
       <td>
-        <button class="btn btn-primary" (click) = "checkActivityAvailability($event.target.id)" id="{{bike.activityId}} ">Add Activity</button>
+        <button class="btn btn-primary" (click) = "checkActivityAvailability($event.target.id)" id="{{bike.activityId}}">Add Activity</button>
       </td>
 
     </tr>

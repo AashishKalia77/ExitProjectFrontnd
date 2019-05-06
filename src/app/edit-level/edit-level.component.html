@@ -1,6 +1,9 @@
 <app-admin-home></app-admin-home>
 <div class="container">
   <form [formGroup]="levelform" novalidate>
+      <div *ngIf="validateMessage != ''">
+          <h3 class="has-info">{{validateMessage}}</h3>
+        </div>
     <select class="form-control" formControlName="levelId" required>
       <option value="">Please select a Level</option>
       <option *ngFor="let m of editLevel" [value]="m.levelId">

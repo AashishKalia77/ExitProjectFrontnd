@@ -23,7 +23,8 @@ export class ViewactivityComponent implements OnInit {
   }
   getData(){
     this.service.getActivity().subscribe(
-      data=>{ this.activity=data;
+      (data:[])=>{ 
+        this.activity=data;
         this.filteredApplicants=data;
       console.log(data)},
       err => console.log(err),
