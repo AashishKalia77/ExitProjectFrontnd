@@ -1,7 +1,4 @@
 import { PipeTransform ,Pipe} from '@angular/core';
-
-
-
 @Pipe({
      name:'employeeFilter'
 })

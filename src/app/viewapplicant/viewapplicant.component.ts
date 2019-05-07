@@ -62,8 +62,6 @@ export class ViewapplicantComponent implements OnInit {
   
     }
     
-    clearfilter(){
-      this.filteredApplicants=this.applicant
-    }
+
   
 }
