@@ -128,6 +128,7 @@ export class NagpServiceService {
 
   updateApplicantDetailsById(applicantId,applicantDetails){
     let body = JSON.stringify(applicantDetails)
+    console.log(body);
     return this.http.put('/server/updateProfile/'+applicantId,body,httpOptions)
   }
 
